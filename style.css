@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+body {
+  background: linear-gradient(to bottom right, #8AD, #1F0);
+  height: 100vh;
+}
+
+.header-tittle {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+main>button {
+  margin-bottom: .5rem;
+}
+
+footer {
+  text-align: center;
+}
