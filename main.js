@@ -35,14 +35,28 @@ const isValidFields = () => {
   return document.getElementById("form").reportValidity()
 }
 
+const clearFields = () => {
+  const fields = document.querySelectorAll(".modal-field")
+  fields.forEach((field) => (field.value = ""))
+}
+
 //Interação com o usuário
 const saveClient = () => {
   if (isValidFields()) {
-    console.log("Cadastrando")
+    document.querySelector("button#save").setAttribute("data-dismiss", "modal")
+    const client = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      tel: document.getElementById("tel").value,
+      city: document.getElementById("city").value,
+    }
+    createClient(client)
+    clearFields()
   } else {
-    console.log("Erro, digite todos os campos")
+    document.querySelector("button#save").setAttribute("data-dismiss", "")
+    alert("Complete todos os campos para continuar!")
   }
 }
 
 //Eventos
-document.getElementById("save").addEventListener("click", saveClient)
+document.querySelector("button#save").addEventListener("click", saveClient)

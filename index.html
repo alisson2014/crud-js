@@ -63,7 +63,7 @@
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-dialog" role="document">
             <div class="modal-content">
               <header class="modal-header">
                 <h2 class="modal-title" id="exampleModalLabel">Novo cliente</h2>
@@ -77,65 +77,42 @@
                 </button>
               </header>
               <form id="form" class="modal-body">
-                <div class="input-group flex-nowrap">
-                  <span class="input-group-text" id="addon-wrapping">@</span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nome do Cliente"
-                    aria-label="Seu nome"
-                    aria-describedby="addon-wrapping"
-                    id="name"
-                    required
-                  />
-                </div>
-                <br />
-                <div class="input-group mb-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Email do cliente"
-                    aria-label="Email do cliente"
-                    id="email"
-                    aria-describedby="basic-addon2"
-                    required
-                  />
-                  <span class="input-group-text" id="basic-addon2"
-                    >@example.com</span
-                  >
-                </div>
-                <div class="input-group flex-nowrap">
-                  <span class="input-group-text" id="addon-wrapping">+</span>
-                  <input
-                    type="tel"
-                    id="tel"
-                    class="form-control"
-                    placeholder="Telefone do cliente"
-                    aria-label="Telefone do cliente"
-                    aria-describedby="addon-wrapping"
-                    required
-                  />
-                </div>
-                <br />
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">City</span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Cidade do cliente"
-                    aria-label="Cidade do cliente"
-                    id="city"
-                    aria-describedby="basic-addon1"
-                    required
-                  />
-                </div>
+                <input
+                  type="text"
+                  id="name"
+                  data-index="new"
+                  class="modal-field"
+                  placeholder="Nome do Cliente"
+                  required
+                />
+                <input
+                  type="email"
+                  id="email"
+                  class="modal-field"
+                  placeholder="e-mail do Cliente"
+                  required
+                />
+                <input
+                  type="text"
+                  id="tel"
+                  class="modal-field"
+                  placeholder="Celular do Cliente"
+                  required
+                />
+                <input
+                  type="text"
+                  id="city"
+                  class="modal-field"
+                  placeholder="Cidade do Cliente"
+                  required
+                />
               </form>
               <footer class="modal-footer">
                 <button
                   type="button"
                   class="btn btn-success"
-                  data-dismiss="modal"
                   id="save"
+                  data-dismiss="modal"
                 >
                   Salvar
                 </button>
