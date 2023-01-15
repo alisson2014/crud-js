@@ -1,3 +1,4 @@
+//Buttons
 const btnSave = document.querySelector("button#save")
 const btnCancel = document.querySelector("button#cancel")
 //CRUD - create read update delete
@@ -55,7 +56,6 @@ const saveClient = () => {
       updateTable()
     }
   } else {
-    btnSave.setAttribute("data-dismiss", "")
     alert("Complete todos os campos para continuar!")
   }
 }
@@ -101,14 +101,15 @@ const editClient = (index) => {
 }
 
 const editDelete = (event) => {
-  if (event.target.type === "button") {
+  const isButton = event.target.type === "button"
+  if (isButton) {
     const [action, index] = event.target.id.split("-")
     if (action === "edit") {
       editClient(index)
     } else {
       const client = readClient()[index]
       const response = confirm(
-        `Você deseja realmente excluir o cliente ${client.name}`
+        `Você deseja realmente excluir o(a) cliente ${client.name}?`
       )
       if (response) {
         deleteClient(index)
