@@ -6,11 +6,11 @@
 
 body * {
   font-family: "Inter", sans-serif;
-  color: #222;
+  color: #252525;
 }
 
 body {
-  background: linear-gradient(to bottom right, #8AD, #1F0);
+  background: linear-gradient(rgb(182, 211, 255), rgb(94, 36, 202));
   height: 100vh;
 }
 
@@ -24,12 +24,26 @@ main>button {
   margin-bottom: .5rem;
 }
 
+td {
+  font-weight: 400;
+}
+
 #form {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: .6rem;
+  gap: .5rem;
+}
+
+#form input {
+  border-radius: 3px;
+  padding: 2px;
+  font-weight: 400;
+}
+
+#form input:focus {
+  background-color: #DEDEDE;
 }
 
 footer {
