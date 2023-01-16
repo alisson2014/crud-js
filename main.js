@@ -34,6 +34,7 @@ const isValidFields = () => {
 const clearFields = () => {
   const fields = document.querySelectorAll(".modal-field")
   fields.forEach((field) => (field.value = ""))
+  document.getElementById("name").setAttribute("data-index", "new")
 }
 
 //Interação com o usuário
@@ -54,6 +55,8 @@ const saveClient = () => {
     } else {
       updateClient(index, client)
       updateTable()
+      clearFields()
+      document.getElementById("name").setAttribute("data-index", "new")
     }
   } else {
     alert("Complete todos os campos para continuar!")
