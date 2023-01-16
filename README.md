@@ -9,8 +9,9 @@
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
 </p>
+
 <p align="center">
-  <img alt="License" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge">
+  <img alt="Preview" src=".github/preview.jpg">
 </p>
 <br>
 
@@ -18,13 +19,26 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- HTML5 e CSS3
-- JavaScript
-- Git e Github
+- HTML e CSS;
+- Bootstrap;
+- JavaScript;
+- Git e Github;
 
 ## 💻 Projeto
 
----CRUD---
+Este projeto foi desenvolvido, com o objetivo de treinar algorítmo e lógica de progamação com Javascript. Nele é possível cadastrar um novo cliente, editar seus dados e os apagar.
+
+Sobre o CRUD:
+
+A sigla CRUD é um acrônimo, de quatro operações básicas, são elas:
+
+C: Create – Criar um novo registro.
+
+R: Read – Ler um registro, ou uma lista de registros.
+
+U: Update – Atualizar um registro.
+
+D: Delete – Excluir um registro.
 
 ## :memo: Licença
 
