@@ -40,6 +40,17 @@ U: Update – Atualizar um registro.
 
 D: Delete – Excluir um registro.
 
+## 🐳 Executando com docker
+
+### Construir a imagem
+``docker build -t simple-crud-js .``
+
+### Iniciar o container
+``docker run -d -p 8080:80 simple-crud-js``
+
+### Acessar no navegador
+``localhost:8080``
+
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT.
