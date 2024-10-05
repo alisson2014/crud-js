@@ -18,7 +18,11 @@ const deleteClient = index => {
 
 const createClient = client => {
   const dbClient = getLocalStorage();
-  dbClient.push(client);
+  const newClient = {
+    ...client,
+    id: dbClient.length + 1
+  };
+  dbClient.push(newClient);
   setLocalStorage(dbClient);
 };
 
@@ -27,8 +31,8 @@ const isValidFields = () => {
 };
 
 const clearFields = () => {
-  const fields = document.querySelectorAll(".modal-field");
-  fields.forEach((field) => (field.value = ""));
+  const fields = document.querySelectorAll("#form .form-control");
+  fields.forEach(field => field.value = "");
   document.getElementById("name").setAttribute("data-index", "new");
 };
 
@@ -41,7 +45,7 @@ const saveClient = () => {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     tel: document.getElementById("tel").value,
-    birthDate: document.getElementById("birthDate").value,
+    birthDate: document.getElementById("birthDate").value
   };
 
   const index = document.getElementById("name").dataset.index;
@@ -59,6 +63,7 @@ const saveClient = () => {
 
 const createRow = (client, index) => {
   const newRow = document.createElement("tr");
+  newRow.id = `client-${client.id}`;
   const formattedDate = new Date(client.birthDate).toLocaleDateString('pt-BR', {
     day: '2-digit',
     month: '2-digit',
@@ -130,3 +135,28 @@ btnCancel.addEventListener("click", clearFields);
 document
   .querySelector("#tableClient>tbody")
   .addEventListener("click", editDelete);
+
+document.getElementById('search').addEventListener('input', function() {
+  const searchValue = this.value.toLowerCase();
+  const clients = getLocalStorage();
+  console.log(clients, searchValue);
+
+  clients.forEach(client => {
+    const clientName = client.name.toLowerCase();
+    const clientRow = document.getElementById(`client-${client.id}`);
+    
+    if (clientName.includes(searchValue)) {
+      clientRow.style.display = '';
+    } else {
+      clientRow.style.display = 'none';
+    }
+  });
+});
+
+document.addEventListener('keydown', function(e) {
+  if(e.key !== 'F6') return;
+  
+  e.preventDefault();
+  const button = document.getElementById('newClientButton');
+  button.click();
+});
