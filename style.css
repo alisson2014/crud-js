@@ -28,24 +28,6 @@ td {
   font-weight: 400;
 }
 
-#form {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  gap: .5rem;
-}
-
-#form input {
-  border-radius: 3px;
-  padding: 2px;
-  font-weight: 400;
-}
-
-#form input:focus {
-  background-color: #DEDEDE;
-}
-
 footer {
   text-align: center;
 }
