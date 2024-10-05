@@ -40,13 +40,16 @@ U: Update – Atualizar um registro.
 
 D: Delete – Excluir um registro.
 
-## 🐳 Executando com docker
+## 🐳 Executando com docker (Produção)
 
-### Construir a imagem
-``docker build -t simple-crud-js .``
+### Construir a imagem e iniciar container
+``docker build -f Dockerfile.build -t simple-crud-js . && docker run -d -p 8080:80 simple-crud-js``
 
-### Iniciar o container
-``docker run -d -p 8080:80 simple-crud-js``
+### Acessar no navegador
+``localhost``
+
+## 🐳 Executando com docker (Ambiente de Desenvolvimento)
+``docker compose up -d``
 
 ### Acessar no navegador
 ``localhost:8080``

@@ -1,3 +1,6 @@
-FROM nginx:latest
-COPY . /usr/share/nginx/html
-EXPOSE 80
+FROM node:latest
+WORKDIR /usr/src/app
+RUN npm install -g live-server
+COPY . .
+EXPOSE 8080
+CMD ["live-server", "--host=0.0.0.0"]
