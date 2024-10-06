@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img alt="Preview" src=".github/preview.jpg">
+  <img alt="Preview" src=".github/preview.png">
 </p>
 <br>
 
