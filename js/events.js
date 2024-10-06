@@ -88,6 +88,9 @@ const initEvents = () => {
     const button = document.getElementById('newClientButton');
     button.click();
   });
+
+    const modal = document.getElementById('exampleModal');
+    modal.addEventListener('hidden.bs.modal', clearFields);
 };
 
 export { initEvents };
