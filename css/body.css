@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(rgb(182, 211, 255), rgb(94, 36, 202));
+    height: 100vh;
+}
+  
+ .header-tittle {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+  
+main>button {
+    margin-bottom: .5rem;
+}
+  
+td {
+    font-weight: 400;
+}
+  
+footer {
+    text-align: center;
+}
